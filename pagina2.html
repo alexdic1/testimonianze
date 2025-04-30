@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -28,6 +27,7 @@
         .buttons {
             display: flex;
             gap: 1em;
+            margin-top: 2em;
         }
         .buttons button {
             font-size: 1.2em;
@@ -40,6 +40,12 @@
         #continue {
             margin-top: 2em;
             display: block;
+            font-size: 1.2em;
+            padding: 0.6em 1.5em;
+            border: 2px solid white;
+            background: transparent;
+            color: white;
+            cursor: pointer;
         }
         audio {
             display: none; /* Hide the audio player initially */
@@ -52,7 +58,7 @@
         <button onclick="prev()">←</button>
         <button onclick="next()">→</button>
     </div>
-    <button id="continue" onclick="toNext()">Avanti →</button>
+    <button id="continue" onclick="toNext()">Continua alla pagina successiva</button>
     
     <!-- Music player -->
     <audio id="music" loop>
@@ -119,3 +125,4 @@
     </script>
 </body>
 </html>
+
