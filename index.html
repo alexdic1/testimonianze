@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <title>Voci del Cerchio</title>
+  <style>
+    body {
+      margin: 0;
+      background: url('images/sfondo-etereo.png') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Cinzel', serif;
+      color: white;
+      text-align: center;
+    }
+    .content {
+      margin-top: 20vh;
+      padding: 2em;
+      background: rgba(0, 0, 0, 0.6);
+      display: inline-block;
+      border-radius: 12px;
+    }
+    .content img {
+      width: 180px;
+      margin-bottom: 1em;
+    }
+    .content p {
+      font-size: 1.3em;
+      line-height: 1.6em;
+    }
+    button {
+      margin-top: 2em;
+      font-size: 1.1em;
+      padding: 0.6em 1.2em;
+      border: 2px solid white;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <img src="images/cerchio-di-kaor.png" alt="Simbolo">
+    <p>
+      Le parole che leggerete non sono nostre.<br>
+      Sono vostre. Siete stati voi a pronunciarle,<br>
+      a scriverle, a lasciarle risuonare nel Cerchio.<br>
+      Noi ci siamo limitati ad ascoltare.
+    </p>
+    <button onclick="start()">🎧 Ascolta e rifletti</button>
+  </div>
+
+  <audio id="musica" loop>
+    <source src="audio/musica.mp3" type="audio/mpeg" />
+  </audio>
+
+  <script>
+    function start() {
+      localStorage.setItem('musicaAttiva', 'true');
+      const audio = document.getElementById('musica');
+      audio.play();
+      window.location.href = 'pagina2.html';
+    }
+  </script>
+</body>
+</html>
